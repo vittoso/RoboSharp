@@ -29,6 +29,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>
     </DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,8 +45,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +74,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Win32Job\HANDLE.cs" />
+    <Compile Include="Win32Job\IO_COUNTERS.cs" />
+    <Compile Include="Win32Job\JobObject.cs" />
+    <Compile Include="Win32Job\JobObjectAccessRights.cs" />
+    <Compile Include="Win32Job\JOBOBJECTINFOCLASS.cs" />
+    <Compile Include="Win32Job\JobObjectLimitFlags.cs" />
+    <Compile Include="Win32Job\JobObjectLimits.cs" />
+    <Compile Include="Win32Job\JOBOBJECT_BASIC_LIMIT_INFORMATION.cs" />
+    <Compile Include="Win32Job\JOBOBJECT_EXTENDED_LIMIT_INFORMATION.cs" />
+    <Compile Include="Win32Job\JOB_OBJECT_LIMIT.cs" />
+    <Compile Include="Win32Job\PCWSTR.cs" />
+    <Compile Include="Win32Job\Windows.Win32.Foundation.BOOL.cs" />
+    <Compile Include="Win32Job\Windows.Win32.PInvoke.cs" />
+    <Compile Include="Win32Job\Windows.Win32.Security.SECURITY_ATTRIBUTES.cs" />
     <Page Include="JobHistoryExpander.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
